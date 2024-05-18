@@ -2,32 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+    /* opacity: 0; */
+  }
+  100% {
+    transform: translateX(-100%);
+    /* opacity: 1; */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.animate-scroll {
+  display: flex;
+  animation: scroll 20s linear infinite;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.dropdown {
+  @apply absolute -right-10 z-50 top-12 mt-3 w-full p-5 rounded-lg bg-black min-w-[210px] h-screen flex flex-col gap-5;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply border rounded-full w-16 bg-gradient-to-b from-sky-500 to-cyan-300;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
