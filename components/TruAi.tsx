@@ -6,11 +6,11 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function TruAi() {
   return (
-    <div className="lg:clip-custom-polygon bg-blue-900 dark:bg-[#1B1C1E] lg:h-[450px] my-10 lg:my-20 flex flex-col lg:flex-row justify-between items-center lg:pl-20 2xl:pl-40">
+    <div className="lg:clip-custom-polygon bg-blue-900 dark:bg-[#1B1C1E] lg:h-[450px] my-10 lg:my-20 flex flex-col lg:flex-row justify-between items-center">
       <div className="pt-20">
         <Image src={VectorImage} alt="vector" className="hidden lg:block" />
       </div>
-      <div className="text-center space-y-3 lg:pl-10 2xl:pl-20 flex flex-col items-center">
+      <div className="text-center space-y-3 flex flex-col items-center">
         <h3 className="text-white text-2xl md:text-5xl">
           Meet{" "}
           <span className="bg-clip-text text-2xl md:text-5xl bg-gradient-to-r from-[#ee216b] to-[#9747ff] text-transparent">
@@ -40,10 +40,10 @@ export default function TruAi() {
           </Link>
         </div>
       </div>
-      <div className="w-[500px] 2xl:w-[700px] h-[300px] relative hidden lg:block">
+      <div className="relative hidden lg:block w-1/3">
         <video
           src={require("../public/videos/product-intro_1_dmajx1_qaemeu.mp4")}
-          className="rounded-full absolute -right-24 2xl:-right-44 2xl:-top-10"
+          className="rounded-full"
           autoPlay
           loop
           muted
